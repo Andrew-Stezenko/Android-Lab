@@ -20,9 +20,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SecondActivity::class.java)
             intent.putExtra("animal", cat)
             startActivity(intent)
-
-
-            //123
         }
 
         val buttonDog = findViewById<Button>(R.id.button2)
