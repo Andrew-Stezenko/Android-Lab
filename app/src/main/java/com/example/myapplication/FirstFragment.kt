@@ -33,6 +33,9 @@ class FirstFragment : Fragment() {
         list.add(Recipe("Snatch", "Guy Ritchie", "2000", "USA"))
         list.add(Recipe("Pulp Fiction", "Quentin Tarantino", "1994", "USA"))
 
+
+        //123123
+
         adapter = RecipeAdapter() { recipe, position ->
             findNavController().navigate(
                 FirstFragmentDirections.toSecondFragment(
