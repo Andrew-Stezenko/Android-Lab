@@ -51,4 +51,8 @@ class RecipeAdapter(
         val element = list[position]
         holder.bind(element, position)
     }
+
+    fun setNewData(it: List<Animal>?) {
+
+    }
 }
