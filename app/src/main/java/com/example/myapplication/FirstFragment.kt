@@ -13,7 +13,6 @@ import com.example.myapplication.databinding.FragmentFirstBinding
 
 class FirstFragment : Fragment() {
 
-    //    val args: FirstFragmentArgs by navArgs()
     lateinit var binding: FragmentFirstBinding
     lateinit var adapter: RecipeAdapter
 
@@ -25,7 +24,6 @@ class FirstFragment : Fragment() {
         // Inflate the layout for this fragment
 
         viewModel = ViewModelProvider(this).get(FirstViewModel::class.java)
-        return inflater.inflate(R.layout.fragment_first, container, false)
 
         binding = FragmentFirstBinding.inflate(layoutInflater, container, false)
         return binding.root
@@ -35,8 +33,6 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val tv = view.findViewById<TextView>(R.id.tv)
-//        val rv = view.findViewById<RecyclerView>(R.id.rv)
-//        val ct = view.findViewById<ConstraintLayout>(R.id.ct)
 
         val list = ArrayList<Recipe>()
         list.add(Recipe("Oppenheimer", "Christopher Nolan", "2023", "USA"))
@@ -71,18 +67,8 @@ class FirstFragment : Fragment() {
                 )
             )
         }
-//        ct.setOnRefreshListener {
-//            viewModel.getAllData()
-//        }
-        viewModel.animalListLd.observe(viewLifecycleOwner) {
-            adapter.setNewData(it)
-        }
         viewModel.weatherLd.observe(viewLifecycleOwner) {
             tv.text = it
         }
-//        viewModel.isLoading.observe(viewLifecycleOwner) {
-//            if(!it)
-//                ct.isContextClickable = false
-//        }
     }
 }

@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiFactory {
-    const val BASE_URL = "https://meowfacts.herokuapp.com/"
+    const val BASE_URL = "https://cat-fact.herokuapp.com/"
 
     private val retrofit: Retrofit = createRetrofit()
     val weatherApi: WeatherApiInterface = retrofit.create(WeatherApiInterface::class.java)

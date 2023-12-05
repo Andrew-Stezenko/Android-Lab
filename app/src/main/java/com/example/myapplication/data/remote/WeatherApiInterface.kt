@@ -7,6 +7,6 @@ import retrofit2.http.QueryMap
 
 interface WeatherApiInterface {
 
-    @GET("onecall")
+    @GET("/facts/random?animal_type=cat&amount=1")
     suspend fun getWeather(@QueryMap params: Map<String, String>): Response<WeatherApiModel>
 }

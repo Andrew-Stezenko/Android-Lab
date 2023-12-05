@@ -1,24 +1,22 @@
 package com.example.myapplication.data.remote.model
 
-import com.google.gson.annotations.SerializedName
-
 data class WeatherApiModel(
-//    val _id: String,
-//    val __v: Int,
-//    val text: String,
-//    val updatedAt: String?,
-//    val deleted: Boolean?,
-//    val source: String?,
-//    val sentCount: Int?,
+    val _id: String,
+    val __v: Int,
+    val text: String,
+    val updatedAt: String?,
+    val deleted: Boolean?,
+    val source: String?,
+    val sentCount: Int?,
 
-    val lat: Float?,
-    val lon: Float?,
-    val timezone: String?,
-    val linkToImage: String?,
-    @SerializedName("timezone_offset") val timezoneOffset: Long?,
-    val current: String?,
-    val hourly: String?,
-    val daily: String?,
+//    val lat: String?,
+//    val lon: String?,
+//    val timezone: String?,
+//    val linkToImage: String?,
+//    @SerializedName("timezone_offset") val timezoneOffset: Long?,
+//    val current: Boolean?,
+//    val hourly: String?,
+//    val daily: String?,
 ) {
 }
 
